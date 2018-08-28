@@ -3,7 +3,7 @@ class ImagesController < ApplicationController
     before_action :set_image, only: [:show, :edit, :update, :destroy]#CallBack
     
     def index
-                    # variable de tipo array @images
+         @images = Image.all          # variable de tipo array @images
     end
 
     
@@ -47,7 +47,7 @@ class ImagesController < ApplicationController
         end
         
         def set_image
-          # pone linea que borre
+         @image =Image.find params[:id]
         end
        
   
